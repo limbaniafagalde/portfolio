@@ -8,7 +8,7 @@ import OurWork from "./pages/OurWork";
 import Nav from "./components/Nav";
 //Router
 import {Routes, Route} from "react-router-dom";
-
+import MovieDetail from "./pages/MovieDetail";
 
 function App() {
   return (
@@ -20,7 +20,9 @@ function App() {
 
         <Route path="/" element={<AboutUs/>} />
 
-        <Route path="/work" element={<OurWork/>} />
+        <Route path="/work" exact element={<OurWork/>} />
+
+        <Route path="/work/:id" element={<MovieDetail/>} />
 
         <Route path="/contact" element={<ContactUs/>} />
 
